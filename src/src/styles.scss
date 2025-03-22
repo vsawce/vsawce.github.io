@@ -61,3 +61,8 @@ body.has-navbar-fixed-top, html.has-navbar-fixed-top {
 .navbar-item:hover {
     background-color: darken($primary, 5%) !important; // Change to your preferred color
 }
+
+//Add padding between navbar and section
+html {
+    scroll-padding-top: 2rem; // Adjust based on navbar height
+}
