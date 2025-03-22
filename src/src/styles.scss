@@ -62,7 +62,16 @@ body.has-navbar-fixed-top, html.has-navbar-fixed-top {
     background-color: darken($primary, 5%) !important; // Change to your preferred color
 }
 
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+    padding-top: $navbar-height;
+}
+
 //Add padding between navbar and section
 html {
     scroll-padding-top: 2rem; // Adjust based on navbar height
+}
+
+//Set max-height of navbar items to same as navbar's height
+.navbar-item {
+    max-height: $navbar-height;  /* Limit the height of navbar item */
 }
