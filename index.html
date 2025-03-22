@@ -22,8 +22,14 @@
           <i class="fab fa-2x fa-linkedin"></i>
         </a>
       </div>
+      <div class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <!-- <span aria-hidden="true"></span> -->
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </div>
     </div>
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navbarMenu">
       <a class="navbar-item mx-auto" style="color:rgb(188, 228, 186);" href="#about">
         <b>About Me</b>
       </a>
@@ -39,20 +45,18 @@
       <a class="navbar-item mx-auto" style="color:rgb(188, 228, 186);" href="#contact">
         <b>Contact</b>
       </a>
-      <div class="navbar-end">
-        <a class="navbar-item is-size-5" href="#name">
-          Vincent Saw
+      <a class="navbar-item is-size-5 is-hidden-mobile" style="color:rgb(255, 255, 255);" href="#name">
+        Vincent Saw
+      </a>
+      <div class="navbar-item is-hidden-mobile">
+        <a href="https://github.com/vsawce" class="icon is-large has-text-light">
+          <i class="fab fa-2x fa-github"></i>
         </a>
-        <div class="navbar-item">
-          <a href="https://github.com/vsawce" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-github"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/vincentsaw/" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-linkedin"></i>
-          </a>
-        </div>
+      </div>
+      <div class="navbar-item is-hidden-mobile">
+        <a href="https://www.linkedin.com/in/vincentsaw/" class="icon is-large has-text-light">
+          <i class="fab fa-2x fa-linkedin"></i>
+        </a>
       </div>
     </div>
   </nav>
@@ -942,6 +946,19 @@
   </footer>
 
   <script src="./src/dist/js/bundle.js"></script>
+
+  <!-- Toggle the burger menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
 </body>
 
 </html>
