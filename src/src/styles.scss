@@ -42,4 +42,36 @@ a.icon > strong {margin-left:.25rem}
 .carousel-cell {width:100%}
 // Flickity - end
 
- 
+
+//// Navbar custom config
+$navbar-height: 3rem;
+
+//Set navbar height
+.navbar {
+    height: $navbar-height!important; // Change this to your preferred height
+    min-height: $navbar-height!important; // Ensures a consistent height
+}
+
+//Align body's padding relative to fixed navbar
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+    padding-top: $navbar-height;
+}
+
+// Make hover color slightly darker than primary color
+.navbar-item:hover {
+    background-color: darken($primary, 5%) !important; // Change to your preferred color
+}
+
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+    padding-top: $navbar-height;
+}
+
+//Add padding between navbar and section
+html {
+    scroll-padding-top: 2rem; // Adjust based on navbar height
+}
+
+//Set max-height of navbar items to same as navbar's height
+.navbar-item {
+    max-height: $navbar-height;  /* Limit the height of navbar item */
+}
